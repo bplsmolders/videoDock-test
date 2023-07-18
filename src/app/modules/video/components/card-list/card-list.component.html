@@ -1,0 +1,13 @@
+<ng-container *ngIf="videoPlaylist$ | async as videos else loading">
+  <div class="card-list" >
+    <ng-container *ngFor="let video of videos">
+      <vd-card
+        [video]="video"
+      ></vd-card>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <mat-spinner color="primary" diameter="50"></mat-spinner>
+</ng-template>

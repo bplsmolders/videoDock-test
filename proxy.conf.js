@@ -1,8 +1,10 @@
 module.exports = [
   {
     context: [
+      '/v2',
+      '/previews'
     ],
-    target: "",
+    target: "https://cdn.jwplayer.com",
     secure: false,
     changeOrigin: true
   }
