@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'vd-root',
@@ -7,8 +6,9 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private translate:TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en')
-  }
+  // ended up not using translations
+  // constructor(private translate:TranslateService) {
+  //   translate.setDefaultLang('en');
+  //   translate.use('en')
+  // }
 }

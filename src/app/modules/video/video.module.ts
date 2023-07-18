@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {CardComponent} from "./components/card/card.component";
-import {BannerComponent} from "./components/banner/banner.component";
 import {MatCardModule} from "@angular/material/card";
 import {CardListComponent} from "./components/card-list/card-list.component";
 import {VideoDataService} from "./services/video-data.service";
@@ -11,6 +10,7 @@ import {VideoPlayerComponent} from "./components/video-player/video-player.compo
 import {VideoPlayerPageComponent} from "./components/video-player-page/video-player-page.component";
 import {MatIconModule} from "@angular/material/icon";
 import {RouterLink} from "@angular/router";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   imports: [
@@ -19,12 +19,12 @@ import {RouterLink} from "@angular/router";
     MatProgressSpinnerModule,
     MatButtonModule,
     MatIconModule,
-    RouterLink
+    RouterLink,
+    MatSnackBarModule
   ],
   declarations: [
     CardComponent,
     CardListComponent,
-    BannerComponent,
     VideoPlayerComponent,
     VideoPlayerPageComponent,
   ],
@@ -34,7 +34,6 @@ import {RouterLink} from "@angular/router";
   exports: [
     CardComponent,
     CardListComponent,
-    BannerComponent,
     VideoPlayerComponent,
     VideoPlayerPageComponent,
   ]
