@@ -1,0 +1,14 @@
+<mat-card class="video-card">
+  <mat-card-header>
+    <div class="video-card__thumbnail">
+      <img [src]="video.image" alt="{{ video.title }}" class="video-card__thumbnail-img">
+    </div>
+  </mat-card-header>
+  <mat-card-content class="video-card__content">
+    <mat-card-title class="video-card__title">{{ video.title }}</mat-card-title>
+    <p class="video-card__description">{{ video.description }}</p>
+  </mat-card-content>
+  <mat-card-actions class="video-card__actions">
+    <button mat-button color="primary" (click)="playVideo()" class="video-card__action-button">Watch Video</button>
+  </mat-card-actions>
+</mat-card>

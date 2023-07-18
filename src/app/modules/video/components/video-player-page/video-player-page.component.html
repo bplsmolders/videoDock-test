@@ -1,0 +1,16 @@
+<ng-container *ngIf="video$ | async as video else loading">
+  <vd-video-player [video]="video"></vd-video-player>
+
+  <div class="video-context">
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.description }}</p>
+    <button mat-button class="video-context__button" color="primary" routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+      Navigate Back
+    </button>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <mat-spinner color="primary" diameter="50"></mat-spinner>
+</ng-template>

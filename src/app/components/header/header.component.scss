@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__home:hover {
+    cursor: pointer;
+  }
+
+  &__links {
+    display: flex;
+  }
+}

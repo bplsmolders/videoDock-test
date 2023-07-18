@@ -1,0 +1,52 @@
+/* Replace "video-card.component.scss" with the name of your component's SCSS file */
+
+/* Styles for the video card component */
+.video-card {
+  width: 300px; /* Set the width of the card as per your design */
+  height: 450px; /* Set a standard height for the card */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide any content that overflows the card */
+
+  &__thumbnail {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio for the thumbnail */
+    position: relative;
+    overflow: hidden;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintain aspect ratio without resizing */
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    overflow: hidden; /* Hide any content that overflows the content area */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+  }
+
+  &__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9; /* Limit to a maximum of 3 lines */
+    overflow: hidden;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__action-button {
+    /* Your action button styles here */
+  }
+}
